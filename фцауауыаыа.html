@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments"># Наша маленькая История#</span><br/>
+			<span class="comments"># Как ты знаешь , я недопрограмист :),</span><br/>
+			<span class="comments"># Но все же , хочу попробовать сделать это по програмистски хD.</span><br/>
+			<span class="comments">##</span><br/>
+			<span class="string">"mr.Nur"</span><br/>
+			<span class="string">"mrs.Diana"</span><br/>
+			<span class="comments"># Май 1 ( 2024 ) впервые познакомились .. . </span><br/>
+			<br/>
+			<span class="comments"># Май 8, помню, как мы тепло общались , и сблизились... </span><br/>
+			<br/>
+			<span class="comments"># Май 12, 2024, Ты стала моей девушкой❤️.</span><br/>
+			<br/>
+			<span class="comments"># С тех пор, мы живем отличную жизнь , вместе, преодлеваем трудности.</span><br/>
+			<br/>
+			<span class="comments"># Каждый день стараемся улучшить свою жизнь к лучшему.</span><br/>
+			<br/>
+			<span class="comments"># Учимся , читаем книги (когда как😄) , развиваемся, работаем.</span><br/>
+			<br/>
+			<span class="comments"># Мы с тобой пока не ругаемся , ну и слвав богу) , но я вверю что мы справимся).</span><br/>
+			<br/>
+			<span class="comments"># Чтоб ты знала, чувствую в тебе родственную душу❤️.</span><br/>
+			<br/>
+			<span class="comments"># Но как бы не было, тепло и любовь к тебе будет долго гореть❤️.</span><br/>
+			<span class="keyword">правда:)</span><br/>
+			<span class="comments"># Может это судьба, будет тяжелеть наши дороги, но я честно хочу чтобы мы преодолели все❤️.</span><br/>
+			<br/>
+			<br/>
+			<span class="comments"># You are the greatest love of my life❤️.</span><br/>
+			<span class="keyword">и это тоже , правда :)</span>:<br/>
+			<span class="placeholder"></span><span class="keyword">if</span><br/>
+			<span class="placeholder"></span><span class="placeholder"></span><br/>
+			<span class="placeholder"></span><span class="keyword">else</span><br/>
+			<span class="placeholder"></span><span class="placeholder"></span><br/>
+			<span class="comments"># С днем годовщины (пока месяца🙃)❤️.</span><br/>
+			<span class="comments"># love you forever❤️.</span><br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Наше время только начинается❤️
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<br/>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		Открытка для <a>Айданы</a> 12/05/2024
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	
+	together.setFullYear(2022, 10, 2);
+	together.setHours(24);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
